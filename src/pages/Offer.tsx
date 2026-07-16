@@ -643,7 +643,7 @@ function OfferPricing() {
             </ul>
             
             <button className="w-full bg-transparent border-[1.5px] border-gold text-charcoal hover:bg-gold font-bold py-[14px] rounded-[4px] transition-colors mt-auto text-[15px]">
-              Get Started
+              Get My Website
             </button>
           </div>
 

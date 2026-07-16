@@ -51,8 +51,8 @@ function Navigation() {
             </span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8">
-            {['What We Build', 'Results', 'How It Works', 'Book a Call'].map((link) => (
+          <nav className="hidden md:flex items-center gap-10">
+            {['Why Work With Us', 'Features', 'How It Works'].map((link) => (
               <a
                 key={link}
                 href={`#${link.toLowerCase().replace(/ /g, '-')}`}
@@ -62,18 +62,11 @@ function Navigation() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
-            <Link
-              to="/offer"
-              className="text-[15px] font-medium text-[#4A4A4A] hover:text-charcoal relative group"
-            >
-              Offer
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
-            </Link>
           </nav>
 
           <div className="hidden md:block">
-            <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold text-[14px] px-6 py-3 rounded-[4px] transition-all duration-300 hover:scale-[1.03]">
-              Get My Free Site Audit
+            <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold text-[15px] px-[28px] py-[14px] rounded-[4px] transition-all duration-200 hover:scale-[1.02]">
+              Free Audit Call
             </button>
           </div>
 
@@ -95,7 +88,7 @@ function Navigation() {
             exit={{ opacity: 0, y: -20 }}
             className="fixed inset-0 z-40 bg-charcoal flex flex-col items-center justify-center gap-8 px-6"
           >
-            {['What We Build', 'Results', 'How It Works', 'Book a Call'].map((link) => (
+            {['Why Work With Us', 'Features', 'How It Works'].map((link) => (
               <a
                 key={link}
                 href={`#${link.toLowerCase().replace(/ /g, '-')}`}
@@ -105,15 +98,8 @@ function Navigation() {
                 {link}
               </a>
             ))}
-            <Link
-              to="/offer"
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-2xl font-heading font-bold text-warm-white hover:text-gold transition-colors"
-            >
-              Offer
-            </Link>
-            <button className="bg-gold text-charcoal font-bold text-lg px-8 py-4 rounded-[4px] w-full max-w-sm mt-4">
-              Get My Free Site Audit
+            <button className="bg-gold text-charcoal font-bold text-[15px] px-[28px] py-[14px] rounded-[4px] w-full max-w-sm mt-4">
+              Free Audit Call
             </button>
           </motion.div>
         )}
@@ -163,12 +149,7 @@ function Hero() {
             >
               More <span className="relative inline-block">
                 Premium
-                <motion.span 
-                  initial={{ width: 0 }}
-                  animate={{ width: '100%' }}
-                  transition={{ delay: 0.8, duration: 1.2, ease: "easeOut" }}
-                  className="absolute bottom-2 left-0 h-3 bg-gold/50 -z-10"
-                />
+                <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-gold -z-10" />
               </span> Jobs.<br />
               Less Chasing Work.
             </motion.h1>
@@ -177,7 +158,7 @@ function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-xl text-[#4A4A4A] mb-10 max-w-[540px] leading-relaxed"
+              className="text-[18px] text-[#4A4A4A] mb-[28px] max-w-[540px] leading-[1.7]"
             >
               We build the website and sales pipeline that puts your building or renovation business
               in front of clients who are ready to spend — and keeps the enquiries coming in year-round.
@@ -189,10 +170,10 @@ function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex flex-col sm:flex-row items-start sm:items-center gap-6 mb-12"
             >
-              <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold px-8 py-4 rounded-[4px] transition-all hover:scale-[1.03] w-full sm:w-auto">
+              <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold px-[28px] py-[14px] rounded-[4px] transition-all hover:scale-[1.02] w-full sm:w-auto text-[15px]">
                 Book My Free Strategy Call
               </button>
-              <a href="#how-it-works" className="text-charcoal font-medium hover:text-gold transition-colors flex items-center gap-2 group">
+              <a href="#how-it-works" className="text-charcoal font-bold border-[1.5px] border-gold rounded-[4px] px-[28px] py-[12.5px] hover:border-[#9E7A28] hover:text-[#2B2B2B] transition-colors flex items-center gap-2 group bg-transparent">
                 See How It Works <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </motion.div>
@@ -217,7 +198,7 @@ function Hero() {
               className="relative rounded-[6px] overflow-hidden aspect-[4/5] shadow-2xl"
             >
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 alt="Premium Residential Renovation"
                 className="w-full h-full object-cover"
               />
@@ -229,52 +210,31 @@ function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="absolute -left-12 top-20 bg-charcoal text-gold p-4 rounded-[6px] shadow-xl max-w-[240px]"
+              className="absolute -left-12 top-20 bg-charcoal text-white px-[18px] py-[12px] rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.2)] max-w-[240px]"
             >
-              <div className="text-xs font-bold uppercase tracking-wider mb-1">Result</div>
-              <div className="font-bold text-sm leading-tight text-white">$340K Extension — 12 Enquiries in 30 Days</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-gold mb-1">Result</div>
+              <div className="font-bold text-[14px] leading-tight text-white">$340K Extension — 12 Enquiries in 30 Days</div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
-              className="absolute -right-8 top-1/2 -translate-y-1/2 bg-gold text-charcoal p-4 rounded-[6px] shadow-xl max-w-[220px]"
+              className="absolute -right-8 top-1/2 -translate-y-1/2 bg-charcoal text-white px-[18px] py-[12px] rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.2)] max-w-[220px]"
             >
-              <div className="text-xs font-bold uppercase tracking-wider mb-1">Result</div>
-              <div className="font-bold text-sm leading-tight">Bathroom Reno Pipeline: 8 Qualified Leads/Month</div>
+              <div className="text-xs font-bold uppercase tracking-wider text-gold mb-1">Result</div>
+              <div className="font-bold text-[14px] leading-tight text-white">Bathroom Reno Pipeline: 8 Qualified Leads/Month</div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 1.0, duration: 0.5 }}
-              className="absolute -left-8 bottom-20 bg-white text-charcoal p-4 rounded-[6px] shadow-xl max-w-[260px] border border-cream"
+              className="absolute -left-8 bottom-20 bg-charcoal text-white px-[18px] py-[12px] rounded-[8px] shadow-[0_4px_16px_rgba(0,0,0,0.2)] max-w-[260px]"
             >
               <div className="text-xs font-bold uppercase tracking-wider text-gold mb-1">Result</div>
-              <div className="font-bold text-sm leading-tight">Booked Out 3 Months — Mornington Peninsula Builder</div>
+              <div className="font-bold text-[14px] leading-tight text-white">Booked Out 3 Months — Mornington Peninsula Builder</div>
             </motion.div>
-          </div>
-        </div>
-      </div>
-
-      {/* Marquee */}
-      <div className="absolute bottom-0 inset-x-0 bg-cream py-6 border-y border-charcoal/5">
-        <div className="max-w-7xl mx-auto px-6 mb-3">
-           <span className="text-xs font-bold text-[#4A4A4A] uppercase tracking-widest">Systems built for businesses like these</span>
-        </div>
-        <div className="overflow-hidden flex">
-          <div className="flex animate-marquee whitespace-nowrap gap-16 items-center opacity-60 grayscale">
-            {[1, 2].map((group) => (
-              <div key={group} className="flex gap-16 shrink-0 items-center">
-                <span className="text-xl font-heading font-bold text-charcoal">Google</span>
-                <span className="text-xl font-heading font-bold text-charcoal">Meta</span>
-                <span className="text-xl font-heading font-bold text-charcoal">Houzz</span>
-                <span className="text-xl font-heading font-bold text-charcoal">hipages</span>
-                <span className="text-xl font-heading font-bold text-charcoal">ServiceSeeking</span>
-                <span className="text-xl font-heading font-bold text-charcoal">Canstar Blue</span>
-              </div>
-            ))}
           </div>
         </div>
       </div>
@@ -282,17 +242,36 @@ function Hero() {
   );
 }
 
-
-
 function CredibilityStrip() {
   return (
-    <section className="bg-charcoal py-20 relative overflow-hidden">
+    <section className="bg-charcoal pt-10 pb-20 relative overflow-hidden">
+      {/* Logos Strip */}
+      <div className="max-w-7xl mx-auto px-6 mb-12 border-b border-white/10 pb-12">
+         <div className="text-[12px] font-normal text-white/50 uppercase tracking-[0.08em] text-center mb-5">
+           Platforms we build on & integrate with
+         </div>
+         <div className="overflow-hidden flex relative">
+           <div className="flex animate-marquee whitespace-nowrap gap-16 items-center opacity-60 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+             {[1, 2].map((group) => (
+               <div key={group} className="flex gap-16 shrink-0 items-center text-white">
+                 <span className="text-xl font-heading font-bold">Google</span>
+                 <span className="text-xl font-heading font-bold">Meta</span>
+                 <span className="text-xl font-heading font-bold">Houzz</span>
+                 <span className="text-xl font-heading font-bold">hipages</span>
+                 <span className="text-xl font-heading font-bold">ServiceSeeking</span>
+                 <span className="text-xl font-heading font-bold">Canstar Blue</span>
+               </div>
+             ))}
+           </div>
+         </div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-0 divide-y-2 sm:divide-y-0 lg:divide-x-2 divide-gold/30">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-0 divide-y-2 sm:divide-y-0 lg:divide-x-2 divide-gold/30 pt-[48px]">
           <StatItem stat="$18M+" number={18} prefix="$" suffix="M+" label="in client revenue generated" />
           <StatItem stat="140+" number={140} suffix="+" label="Australian trade & reno businesses" />
           <StatItem stat="30 Days" number={30} suffix=" Days" label="average time to first qualified lead" />
-          <StatItem stat="4.9 ★" number={4} suffix=".9 ★" label="Google rating across all clients" isFloat={true} floatEnd={4.9} />
+          <StatItem stat="4.9 ★" number={4} suffix=".9 ★" label="Average Google rating across all clients" isFloat={true} floatEnd={4.9} />
         </div>
       </div>
     </section>
@@ -339,7 +318,7 @@ function StatItem({ stat, number, prefix = "", suffix = "", label, isFloat, floa
       <div className="text-5xl font-heading font-bold text-gold mb-3">
         {prefix}{count}{suffix}
       </div>
-      <div className="text-white text-[15px] font-medium leading-tight max-w-[200px] mx-auto">{label}</div>
+      <div className="text-[16px] text-white/85 font-medium leading-tight max-w-[200px] mx-auto">{label}</div>
     </motion.div>
   );
 }
@@ -347,22 +326,22 @@ function StatItem({ stat, number, prefix = "", suffix = "", label, isFloat, floa
 function OutcomeProof() {
   const cards = [
     {
-      label: "BATHROOM RENOVATION",
+      label: "BATHROOM RENOVATION — MELBOURNE, VIC",
       title: "From 2 calls a month to 11 qualified enquiries",
       story: "Darren runs a mid-size reno business in Melbourne's eastern suburbs. Six weeks after launch, he had more leads than he could handle.",
-      author: "Darren — Melbourne, VIC"
+      author: "Thornton Build Co — Brisbane, QLD"
     },
     {
-      label: "HOME EXTENSION",
+      label: "HOME EXTENSION — BRISBANE, QLD",
       title: "Closed a $280K project from an organic Google lead",
       story: "They were relying entirely on word of mouth. We built a system that captured high-intent searches in their local area.",
-      author: "Sarah & Mike — Brisbane, QLD"
+      author: "Atlas Reno Group — Melbourne Eastern Suburbs, VIC"
     },
     {
-      label: "KITCHEN & LIVING",
+      label: "KITCHEN & LIVING — PERTH, WA",
       title: "Stopped competing on price with 'cheap' quotes",
       story: "Their old site looked like every other tradie. The new site positioned them as premium, allowing them to raise their margins by 15%.",
-      author: "Jason — Perth, WA"
+      author: "Western Edge Renovations — Perth, WA"
     }
   ];
 
@@ -383,7 +362,7 @@ function OutcomeProof() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-[#4A4A4A] max-w-[560px] mx-auto"
+            className="text-[16px] text-[#4A4A4A] max-w-[560px] mx-auto"
           >
             These aren't vanity metrics. These are enquiries, booked jobs, and dollars in the bank.
           </motion.p>
@@ -397,12 +376,12 @@ function OutcomeProof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
-              className="bg-white rounded-[6px] p-9 shadow-sm border-t-[3px] border-gold"
+              className="bg-white rounded-[6px] p-[28px] shadow-sm border-t-[3px] border-gold flex flex-col"
             >
-              <div className="text-gold text-xs font-bold uppercase tracking-widest mb-6">{card.label}</div>
+              <div className="mb-6"><span className="bg-gold text-charcoal text-[11px] font-bold uppercase rounded-full px-3 py-1 inline-block">{card.label}</span></div>
               <h3 className="text-[28px] font-heading font-bold text-charcoal mb-4 leading-tight">{card.title}</h3>
-              <p className="text-[15px] text-[#4A4A4A] mb-8 leading-relaxed">{card.story}</p>
-              <div className="text-sm italic text-charcoal font-medium border-t border-cream pt-4">{card.author}</div>
+              <p className="text-[16px] text-[#4A4A4A] mb-8 leading-relaxed flex-grow">{card.story}</p>
+              <div className="text-[15px] italic text-[#4A4A4A] border-t border-cream pt-4">{card.author}</div>
             </motion.div>
           ))}
         </div>
@@ -443,21 +422,21 @@ function WhoThisIsFor() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div>
             <div className="text-gold text-sm font-bold uppercase tracking-widest mb-6">THIS IS BUILT FOR YOU IF...</div>
-            <h2 className="text-5xl font-heading font-bold text-white mb-10 leading-tight">
+            <h2 className="text-[36px] font-heading font-bold text-gold mb-10 leading-tight">
               You build world-class homes.<br />
               Your website shouldn't let you down.
             </h2>
             
-            <ul className="space-y-4 mb-10">
+            <ul className="space-y-2 mb-10">
               {checklist.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
-                  <Check className="w-6 h-6 text-gold shrink-0 mt-0.5" />
-                  <span className="text-[18px] text-white leading-relaxed">{item}</span>
+                  <Check className="w-6 h-6 text-gold shrink-0 mt-1" />
+                  <span className="text-[15px] font-medium text-white leading-[2.0]">{item}</span>
                 </li>
               ))}
             </ul>
 
-            <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold px-8 py-4 rounded-[4px] transition-all hover:scale-[1.03]">
+            <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold px-[28px] py-[14px] rounded-[4px] transition-all duration-200 hover:scale-[1.02] text-[15px]">
               Yes, That's Me — Let's Talk
             </button>
           </div>
@@ -468,7 +447,7 @@ function WhoThisIsFor() {
               return (
                 <div key={i} className="bg-[#3D3D3D] rounded-[6px] p-8 text-center aspect-square flex flex-col items-center justify-center gap-4 transition-transform hover:scale-[1.02]">
                   <Icon className="w-12 h-12 text-gold stroke-1" />
-                  <span className="text-white font-medium">{item.name}</span>
+                  <span className="text-[15px] text-white font-normal">{item.name}</span>
                 </div>
               );
             })}
@@ -510,10 +489,10 @@ function WhatWeBuild() {
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white border-l-[3px] border-gold p-10 lg:p-14"
+            className="bg-white border-t-[3px] border-gold p-10 lg:p-14 shadow-lg"
           >
             <div className="w-16 h-16 rounded-full bg-cream flex items-center justify-center mb-8">
-               <HomeIcon className="w-8 h-8 text-gold stroke-1" />
+               <HomeIcon className="w-12 h-12 text-gold stroke-1" />
             </div>
             <h3 className="text-3xl font-heading font-bold text-charcoal mb-6 leading-tight">
               A Site That Sells Your Work Before You Even Pick Up the Phone
@@ -523,7 +502,7 @@ function WhatWeBuild() {
               Fast load times, mobile-first design, professional photography layout, and copy written
               specifically for Australian homeowners who are ready to spend.
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {[
                 "Conversion-optimised layout",
                 "Industry-specific copywriting",
@@ -531,8 +510,8 @@ function WhatWeBuild() {
                 "You own it outright — no monthly platform fees",
                 "Live in under 4 weeks"
               ].map((feat, i) => (
-                <li key={i} className="flex items-center gap-3 text-[15px] font-medium text-charcoal">
-                  <div className="w-2 h-2 rounded-full bg-gold" />
+                <li key={i} className="flex items-start gap-3 text-[15px] font-medium text-charcoal leading-[1.9]">
+                  <div className="text-gold font-bold text-lg leading-[1.3]">·</div>
                   {feat}
                 </li>
               ))}
@@ -545,10 +524,10 @@ function WhatWeBuild() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="bg-charcoal border-l-[3px] border-gold p-10 lg:p-14"
+            className="bg-charcoal border-t-[3px] border-gold p-10 lg:p-14 shadow-lg"
           >
             <div className="w-16 h-16 rounded-full bg-[#3D3D3D] flex items-center justify-center mb-8">
-               <svg className="w-8 h-8 text-gold stroke-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+               <svg className="w-12 h-12 text-gold stroke-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
                </svg>
             </div>
@@ -560,7 +539,7 @@ function WhatWeBuild() {
               to follow up. We build you an automated pipeline that sends texts, emails, and reminders
               the moment a lead comes in, so no enquiry falls through the cracks.
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-2">
               {[
                 "Instant lead notification & auto-reply",
                 "Automated follow-up sequences (SMS + Email)",
@@ -568,8 +547,8 @@ function WhatWeBuild() {
                 "Booking system integrated with your calendar",
                 "Monthly performance report"
               ].map((feat, i) => (
-                <li key={i} className="flex items-center gap-3 text-[15px] font-medium text-white">
-                  <div className="w-2 h-2 rounded-full bg-gold" />
+                <li key={i} className="flex items-start gap-3 text-[15px] font-medium text-white leading-[1.9]">
+                  <div className="text-gold font-bold text-lg leading-[1.3]">·</div>
                   {feat}
                 </li>
               ))}
@@ -628,7 +607,7 @@ function HowItWorks() {
 
         <div className="relative grid md:grid-cols-3 gap-12 lg:gap-20 mb-20">
            {/* Connecting Line (Desktop) */}
-           <div className="hidden md:block absolute top-12 left-1/6 right-1/6 h-[2px] border-t-2 border-dashed border-gold/50 z-0"></div>
+           <div className="hidden md:block absolute top-12 left-1/6 right-1/6 h-[2px] border-t-2 border-dashed border-gold/60 z-0"></div>
 
            {steps.map((step, i) => {
              const Icon = step.icon;
@@ -641,22 +620,22 @@ function HowItWorks() {
                  transition={{ duration: 0.6, delay: i * 0.2 }}
                  className="relative z-10 bg-warm-white"
                >
-                 <div className="absolute -top-10 -left-6 text-[100px] font-heading font-extrabold text-gold/10 leading-none pointer-events-none select-none">
+                 <div className="absolute -top-6 -left-4 text-[96px] font-heading font-extrabold text-gold opacity-8 pointer-events-none select-none">
                    {step.num}
                  </div>
                  <div className="w-24 h-24 bg-cream rounded-full flex items-center justify-center mb-8 relative border-4 border-warm-white">
                    <Icon className="w-10 h-10 text-gold stroke-1" />
                  </div>
                  <h3 className="text-[22px] font-heading font-bold text-charcoal mb-4 relative">{step.title}</h3>
-                 <p className="text-[15px] text-[#4A4A4A] leading-relaxed relative">{step.body}</p>
+                 <p className="text-[16px] text-[#4A4A4A] leading-relaxed relative">{step.body}</p>
                </motion.div>
              );
            })}
         </div>
 
         <div className="text-center">
-          <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold px-8 py-4 rounded-[4px] transition-all hover:scale-[1.03]">
-            Start the Conversation →
+          <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold px-[28px] py-[14px] rounded-[4px] transition-all duration-200 hover:scale-[1.02] text-[15px]">
+            Start With a Free Strategy Call
           </button>
         </div>
       </div>
@@ -670,11 +649,11 @@ function TrustSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
-             <div className="aspect-[4/5] max-w-md mx-auto lg:mx-0 relative z-10">
+             <div className="aspect-[4/5] max-w-md mx-auto lg:mx-0 relative z-10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
                 <img src="https://images.unsplash.com/photo-1540569014015-19a7be504e3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Team Lead" className="w-full h-full object-cover rounded-[4px] grayscale hover:grayscale-0 transition-all duration-700" />
              </div>
              {/* Gold frame accent */}
-             <div className="absolute top-4 -right-4 lg:right-auto lg:-left-4 bottom-[-16px] w-[calc(100%-2rem)] max-w-md border-[3px] border-gold rounded-[4px] z-0" />
+             <div className="absolute -bottom-2 -right-2 lg:-bottom-2 lg:-right-2 w-full max-w-md h-full border-[3px] border-gold rounded-[4px] z-0 left-1/2 -translate-x-1/2 lg:left-0 lg:translate-x-0 ml-2" />
           </div>
 
           <div>
@@ -697,11 +676,11 @@ function TrustSection() {
              </div>
              
              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8">
-               <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold px-8 py-4 rounded-[4px] transition-all hover:scale-[1.03]">
+               <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold px-[28px] py-[14px] rounded-[4px] transition-all duration-200 hover:scale-[1.02] text-[15px]">
                  Book a Free Strategy Call
                </button>
-               <a href="#" className="text-white hover:text-gold transition-colors font-medium border-b border-white hover:border-gold pb-0.5">
-                 Learn About Our Process →
+               <a href="#" className="text-gold font-bold border-[1.5px] border-gold rounded-[4px] px-[28px] py-[12.5px] hover:border-[#9E7A28] hover:text-[#9E7A28] transition-colors flex items-center gap-2 group bg-transparent">
+                 View Client Results
                </a>
              </div>
           </div>
@@ -730,11 +709,11 @@ function FinalCTA() {
           show you exactly what's costing you jobs, and outline what a proper system would look like.
         </p>
         
-        <p className="text-[14px] text-charcoal/60 mb-10 font-medium">
+        <p className="text-[14px] text-charcoal/70 mb-10 font-medium">
           No obligation. No sales pressure. Just straight talk.
         </p>
 
-        <button className="bg-charcoal hover:bg-[#1a1a1a] text-white font-bold px-10 py-5 rounded-[4px] text-lg transition-all shadow-xl hover:shadow-2xl animate-[pulse_3s_ease-in-out_infinite]">
+        <button className="bg-charcoal hover:bg-[#3D3D3D] text-white font-bold px-[28px] py-[14px] rounded-[4px] text-[15px] transition-all duration-200 hover:scale-[1.02] shadow-xl hover:shadow-2xl">
           Book My Free Audit Call
         </button>
 
@@ -766,7 +745,7 @@ function Footer() {
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6">
-            {['What We Build', 'Results', 'How It Works'].map(link => (
+            {['Why Work With Us', 'Features', 'How It Works'].map(link => (
               <a key={link} href={`#${link.toLowerCase().replace(/ /g, '-')}`} className="text-white/80 hover:text-gold text-[15px] font-medium transition-colors">
                 {link}
               </a>
@@ -784,7 +763,7 @@ function Footer() {
         </div>
 
         {/* Row 2 */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60 mb-6 font-medium">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-white/60 mb-6 font-medium">
           <div>ABN: [ABN NUMBER]</div>
           <div>Melbourne, VIC, Australia</div>
           <div>© 2026 [Brand Name]. All rights reserved.</div>

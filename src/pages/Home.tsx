@@ -62,6 +62,10 @@ function Navigation() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
+            <Link to="/offer" className="text-[15px] font-medium text-[#4A4A4A] hover:text-charcoal relative group">
+              Offer
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </nav>
 
           <div className="hidden md:block">
@@ -98,6 +102,13 @@ function Navigation() {
                 {link}
               </a>
             ))}
+            <Link
+              to="/offer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-heading font-bold text-warm-white hover:text-gold transition-colors"
+            >
+              Offer
+            </Link>
             <button className="bg-gold text-charcoal font-bold text-[15px] px-[28px] py-[14px] rounded-[4px] w-full max-w-sm mt-4">
               Free Audit Call
             </button>

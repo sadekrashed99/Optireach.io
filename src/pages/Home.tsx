@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowRight, Check, Hammer, Wrench, Bath, Home as HomeIcon, TreePine, PaintRoller, Calendar } from 'lucide-react';
+import { Menu, X, ArrowRight, Check, Hammer, Wrench, Bath, Home as HomeIcon, TreePine, Calendar, Settings, PaintRoller, Magnet } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link } from 'react-router-dom';
 
@@ -581,13 +581,13 @@ function HowItWorks() {
     },
     {
       num: "02",
-      icon: PaintRoller,
+      icon: Settings,
       title: "We Build Your System",
       body: "Our team handles everything — design, copy, setup, and technical build. You review and approve. No DIY, no confusing dashboards, no homework for you."
     },
     {
       num: "03",
-      icon: Hammer,
+      icon: Magnet,
       title: "Leads Start Coming In",
       body: "Your site goes live, your pipeline activates, and within 30 days you'll see qualified enquiries from homeowners who are serious about their project."
     }
@@ -618,7 +618,7 @@ function HowItWorks() {
 
         <div className="relative grid md:grid-cols-3 gap-12 lg:gap-20 mb-20">
            {/* Connecting Line (Desktop) */}
-           <div className="hidden md:block absolute top-12 left-1/6 right-1/6 h-[2px] border-t-2 border-dashed border-gold/60 z-0"></div>
+           <div className="hidden md:block absolute top-12 left-[15%] right-[15%] h-[2px] border-t-2 border-dashed border-gold/60 z-0"></div>
 
            {steps.map((step, i) => {
              const Icon = step.icon;
@@ -629,16 +629,16 @@ function HowItWorks() {
                  whileInView={{ opacity: 1, x: 0 }}
                  viewport={{ once: true }}
                  transition={{ duration: 0.6, delay: i * 0.2 }}
-                 className="relative z-10 bg-warm-white"
+                 className="relative z-10 bg-warm-white text-center"
                >
-                 <div className="absolute -top-6 -left-4 text-[96px] font-heading font-extrabold text-gold opacity-8 pointer-events-none select-none">
+                 <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-[96px] font-heading font-extrabold text-gold opacity-8 pointer-events-none select-none z-0">
                    {step.num}
                  </div>
-                 <div className="w-24 h-24 bg-cream rounded-full flex items-center justify-center mb-8 relative border-4 border-warm-white">
+                 <div className="w-24 h-24 mx-auto bg-cream rounded-full flex items-center justify-center mb-8 relative border-4 border-warm-white z-10">
                    <Icon className="w-10 h-10 text-gold stroke-1" />
                  </div>
-                 <h3 className="text-[22px] font-heading font-bold text-charcoal mb-4 relative">{step.title}</h3>
-                 <p className="text-[16px] text-[#4A4A4A] leading-relaxed relative">{step.body}</p>
+                 <h3 className="text-[22px] font-heading font-bold text-charcoal mb-4 relative z-10">{step.title}</h3>
+                 <p className="text-[16px] text-[#4A4A4A] leading-relaxed relative z-10">{step.body}</p>
                </motion.div>
              );
            })}

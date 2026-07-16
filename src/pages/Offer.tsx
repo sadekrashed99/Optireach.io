@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Check, X, Calendar, PenTool, Smartphone, Key, ChevronDown, ShieldCheck, MapPin, Monitor, Phone, GitMerge, Layout } from 'lucide-react';
+import { Check, X, Calendar, PenTool, Smartphone, Key, ChevronDown, ShieldCheck, MapPin, Settings, Phone, GitMerge, Layout } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function Offer() {
@@ -356,7 +356,7 @@ function OfferSteps() {
     },
     {
       num: "02",
-      icon: Monitor,
+      icon: Settings,
       title: "We Build. You Approve.",
       body: "Our team writes the copy, designs the layout, builds the pipeline automation, and handles everything technical. You get shown the work before anything goes live."
     },
@@ -404,12 +404,12 @@ function OfferSteps() {
                  whileInView={{ opacity: 1, y: 0 }}
                  viewport={{ once: true }}
                  transition={{ duration: 0.6, delay: i * 0.2 }}
-                 className="relative z-10 bg-white rounded-[6px] p-8 shadow-xl overflow-hidden"
+                 className="relative z-10 bg-white rounded-[6px] p-8 shadow-xl overflow-hidden text-center"
                >
-                 <div className="absolute -top-5 -left-4 text-[96px] font-heading font-extrabold text-gold opacity-8 pointer-events-none select-none leading-none z-0">
+                 <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-[96px] font-heading font-extrabold text-gold opacity-8 pointer-events-none select-none leading-none z-0">
                    {step.num}
                  </div>
-                 <div className="mb-6 relative z-10">
+                 <div className="mb-6 relative z-10 flex justify-center">
                    <Icon className="w-10 h-10 text-gold stroke-[1.5]" />
                  </div>
                  <h3 className="text-[22px] font-heading font-bold text-charcoal mb-4 leading-tight relative z-10">{step.title}</h3>

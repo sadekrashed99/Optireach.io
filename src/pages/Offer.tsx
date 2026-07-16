@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Check, X, Calendar, PenTool, Smartphone, Key, ChevronDown, ShieldCheck, MapPin, Monitor, Phone, GitMerge, Layout } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function Offer() {
   return (
@@ -49,14 +50,14 @@ function OfferNavigation() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-gold rotate-45 flex items-center justify-center rounded-sm">
-            <div className="w-3 h-3 bg-charcoal -rotate-45" />
+        <Link to="/" className="flex items-center gap-2 group">
+          <div className="w-8 h-8 bg-gold rotate-45 flex items-center justify-center rounded-sm transition-transform group-hover:rotate-90 duration-500">
+            <div className="w-3 h-3 bg-charcoal -rotate-45 transition-transform group-hover:-rotate-90 duration-500" />
           </div>
           <span className="font-heading font-bold text-xl tracking-tight text-charcoal">
             [Brand Name]
           </span>
-        </div>
+        </Link>
 
         <div>
           <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold text-[14px] px-6 py-3 rounded-[4px] transition-all duration-300 hover:scale-[1.03]">

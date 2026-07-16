@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, Check, Hammer, Wrench, Bath, Home as HomeIcon, TreePine, PaintRoller, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export function Home() {
   return (
@@ -41,14 +42,14 @@ function Navigation() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gold rotate-45 flex items-center justify-center rounded-sm">
-              <div className="w-3 h-3 bg-charcoal -rotate-45" />
+          <Link to="/" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 bg-gold rotate-45 flex items-center justify-center rounded-sm transition-transform group-hover:rotate-90 duration-500">
+              <div className="w-3 h-3 bg-charcoal -rotate-45 transition-transform group-hover:-rotate-90 duration-500" />
             </div>
             <span className="font-heading font-bold text-xl tracking-tight text-charcoal">
               [Brand Name]
             </span>
-          </div>
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             {['What We Build', 'Results', 'How It Works', 'Book a Call'].map((link) => (
@@ -61,6 +62,13 @@ function Navigation() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
               </a>
             ))}
+            <Link
+              to="/offer"
+              className="text-[15px] font-medium text-[#4A4A4A] hover:text-charcoal relative group"
+            >
+              Offer
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </nav>
 
           <div className="hidden md:block">
@@ -97,6 +105,13 @@ function Navigation() {
                 {link}
               </a>
             ))}
+            <Link
+              to="/offer"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-2xl font-heading font-bold text-warm-white hover:text-gold transition-colors"
+            >
+              Offer
+            </Link>
             <button className="bg-gold text-charcoal font-bold text-lg px-8 py-4 rounded-[4px] w-full max-w-sm mt-4">
               Get My Free Site Audit
             </button>

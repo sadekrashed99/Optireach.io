@@ -61,7 +61,7 @@ function OfferNavigation() {
 
         <div>
           <button className="bg-gold hover:bg-[#9E7A28] text-charcoal font-bold text-[15px] px-[28px] py-[14px] rounded-[4px] transition-all duration-200 hover:scale-[1.02]">
-            Book a Call
+            Book My Free Audit
           </button>
         </div>
       </div>
